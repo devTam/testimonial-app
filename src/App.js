@@ -1,11 +1,34 @@
-import { Typography } from "@mui/material";
 import "./App.css";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Header from "./components/Header";
+import Jumbotron from "./components/Jumbotron";
+import Experience from "./components/Experience";
+import Testimonials from "./components/Testimonials";
+import MoreTestimonials from "./components/MoreTestimonials";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#FF5C00',
+    },
+  },
+  typography: {
+    fontFamily: 'Raleway, Arial',
+  },
+});
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
-      <Typography variant="contained">Hello</Typography>
+      <Header />
+      <Jumbotron />
+      <Experience dark={true} />
+      <Testimonials />
+      <Experience dark={false} />
+      <MoreTestimonials />
     </div>
+    </ThemeProvider>
   );
 }
 
