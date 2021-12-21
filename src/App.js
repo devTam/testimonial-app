@@ -5,6 +5,7 @@ import Jumbotron from "./components/Jumbotron";
 import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import MoreTestimonials from "./components/MoreTestimonials";
+import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -27,6 +28,7 @@ function App() {
       <Testimonials />
       <Experience dark={false} />
       <MoreTestimonials />
+      <Footer />
     </div>
     </ThemeProvider>
   );

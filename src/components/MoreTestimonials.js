@@ -50,7 +50,7 @@ const data = [
 function Testimonials() {
   return (
     <Container maxWidth="md">
-      <Grid container spacing={10} align="between" py={10}>
+      <Grid container spacing={10} align="between" py={15}>
         {data.map((item) => {
           return (
             <Grid item xs={12} md={4} key={item.name}>
